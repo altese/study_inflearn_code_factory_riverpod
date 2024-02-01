@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:inflearn_code_factory_riverpod/layout/default_layout.dart';
-import 'package:inflearn_code_factory_riverpod/riverpod/future_provider.dart';
 import 'package:inflearn_code_factory_riverpod/riverpod/stream_provider.dart';
 
 class StreamProviderScreen extends ConsumerWidget {

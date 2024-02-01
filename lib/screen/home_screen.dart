@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:inflearn_code_factory_riverpod/layout/default_layout.dart';
+import 'package:inflearn_code_factory_riverpod/screen/family_modifier_screen.dart';
 import 'package:inflearn_code_factory_riverpod/screen/future_provider_screen.dart';
 import 'package:inflearn_code_factory_riverpod/screen/state_notifier_provider_screen.dart';
 import 'package:inflearn_code_factory_riverpod/screen/state_provider_screen.dart';
@@ -53,6 +54,16 @@ class HomeScreen extends StatelessWidget {
               );
             },
             child: const Text('StreamProvider'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => const FamilyModifierScreen(),
+                ),
+              );
+            },
+            child: const Text('FamilyModifier'),
           ),
         ],
       ),
