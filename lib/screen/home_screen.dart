@@ -3,6 +3,7 @@ import 'package:inflearn_code_factory_riverpod/layout/default_layout.dart';
 import 'package:inflearn_code_factory_riverpod/screen/auto_dispose_modifier_screen.dart';
 import 'package:inflearn_code_factory_riverpod/screen/family_modifier_provider_screen.dart';
 import 'package:inflearn_code_factory_riverpod/screen/future_provider_screen.dart';
+import 'package:inflearn_code_factory_riverpod/screen/listen_screen.dart';
 import 'package:inflearn_code_factory_riverpod/screen/state_notifier_provider_screen.dart';
 import 'package:inflearn_code_factory_riverpod/screen/state_provider_screen.dart';
 import 'package:inflearn_code_factory_riverpod/screen/stream_provider_screen.dart';
@@ -75,6 +76,16 @@ class HomeScreen extends StatelessWidget {
               );
             },
             child: const Text('AutoDisposeScreen'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => const ListenScreen(),
+                ),
+              );
+            },
+            child: const Text('ListenScreen'),
           ),
         ],
       ),
