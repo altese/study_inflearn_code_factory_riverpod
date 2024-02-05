@@ -49,6 +49,7 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
   riverpod_lint: ^2.3.7
+  build_runner:
   riverpod_generator: ^2.3.9
 
 # For information on the generic Dart part of this file, see the
