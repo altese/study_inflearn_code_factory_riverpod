@@ -33,10 +33,22 @@ class CodeGenerationScreen extends ConsumerWidget {
             loading: () => const Center(child: CircularProgressIndicator()),
           ),
           // const _StateFiveWidget(),
-          Consumer(builder: (context, ref, child) {
-            final state5 = ref.watch(gStateNotifierProvider);
-            return Text('state5: $state5');
-          }),
+          // 상위 위젯까지 빌드되지 않기를 원할 때 Consumer 사용
+          Consumer(
+            builder: (context, ref, child) {
+              final state5 = ref.watch(gStateNotifierProvider);
+
+              // 새로 렌더링되어야 하는 위젯
+              return Column(
+                children: [
+                  Text('state5: $state5'),
+                  if (child != null) child,
+                ],
+              );
+            },
+            // 새로 렌더링되지 않기를 원하는 위젯
+            child: const Text('hello'),
+          ),
           Text('state4: $state4'),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
