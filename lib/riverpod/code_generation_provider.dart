@@ -49,3 +49,20 @@ int gStateMultiply(
 }) {
   return number1 * number2;
 }
+
+// stateNotifierProvider
+@riverpod
+class GStateNotifier extends _$GStateNotifier {
+  @override
+  int build() {
+    return 0;
+  }
+
+  increment() {
+    state++;
+  }
+
+  decrement() {
+    state--;
+  }
+}
